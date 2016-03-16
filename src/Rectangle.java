@@ -8,6 +8,10 @@ public class Rectangle {
     }
 
     public int area() {
-    return this.width*this.height;
+        return width * height;
+    }
+
+    public int perimeter() {
+        return 2 * (width + height);
     }
 }
