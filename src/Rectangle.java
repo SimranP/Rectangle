@@ -7,11 +7,11 @@ public class Rectangle {
         this.width = width;
     }
 
-    public int area() {
+    public Measurement area() {
         return width.multiply(height);
     }
 
-    public int perimeter() {
-        return 2 * (width.add(height));
+    public Measurement perimeter() {
+        return Measurement.newInstance(2).multiply(width.add(height));
     }
 }
