@@ -1,17 +1,17 @@
 public class Rectangle {
-    private final int height;
-    private final int width;
+    private final Measurement height;
+    private final Measurement width;
 
-    public Rectangle(int height, int width) {
+    public Rectangle(Measurement height, Measurement width) {
         this.height = height;
         this.width = width;
     }
 
     public int area() {
-        return width * height;
+        return width.multiply(height);
     }
 
     public int perimeter() {
-        return 2 * (width + height);
+        return 2 * (width.add(height));
     }
 }
