@@ -3,7 +3,7 @@
     # To calculate the associative properties of rectangle
 */
 
-public class Rectangle implements Shapes {
+public class Rectangle{
     private final Measurement height;
     private final Measurement width;
 
@@ -12,12 +12,10 @@ public class Rectangle implements Shapes {
         this.width = width;
     }
 
-    @Override
     public Measurement calculateArea() {
         return width.multiply(height);
     }
 
-    @Override
     public Measurement calculatePerimeter() {
         return Measurement.newInstance(2).multiply(width.add(height));
     }
