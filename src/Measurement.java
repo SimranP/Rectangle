@@ -6,10 +6,10 @@
 public class Measurement {
     private double number;
 
-    public static Measurement newInstance(double number) {
+    public static Measurement newInstance(double number)  {
         if (number >= 0)
             return new Measurement(number);
-        throw new RuntimeException("Measurement can't be " + number);
+        throw new NegativeValueException("Expected positive value got " + number);
     }
 
     private Measurement(double number) {
