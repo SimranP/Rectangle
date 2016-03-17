@@ -1,3 +1,8 @@
+/*
+   Job of Measurement -----
+        # To answer the calculations between two measurements .
+*/
+
 public class Measurement {
     private double number;
 
@@ -19,7 +24,15 @@ public class Measurement {
         return new Measurement(number * anotherMeasurement.number);
     }
 
-    public double value() {
-        return number;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Measurement that = (Measurement) o;
+
+        return Double.compare(that.number, number) == 0;
+
     }
+
 }

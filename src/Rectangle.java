@@ -1,3 +1,8 @@
+/*
+  Job of Rectangle ---
+    # To calculate the associative properties of rectangle
+*/
+
 public class Rectangle {
     private final Measurement height;
     private final Measurement width;

@@ -9,7 +9,7 @@ public class MeasurementTest {
         Measurement measurement2 = Measurement.newInstance(1);
         Measurement expectedMeasurement = Measurement.newInstance(3);
         Measurement actualMeasurement = measurement1.add(measurement2);
-        assertEquals(expectedMeasurement.value(), actualMeasurement.value(), 0.001);
+        assertEquals(expectedMeasurement, actualMeasurement);
     }
 
     @Test
@@ -18,7 +18,7 @@ public class MeasurementTest {
         Measurement measurement2 = Measurement.newInstance(1);
         Measurement expectedMeasurement = Measurement.newInstance(2);
         Measurement actualMeasurement = measurement1.multiply(measurement2);
-        assertEquals(expectedMeasurement.value(), actualMeasurement.value(), 0.001);
+        assertEquals(expectedMeasurement, actualMeasurement);
     }
 
     @Test(expected = RuntimeException.class)
